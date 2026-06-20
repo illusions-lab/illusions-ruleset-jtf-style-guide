@@ -1,0 +1,465 @@
+{
+  "$comment": "Ruleset meta — read WITHOUT executing code (UI listing, engineApi check, quarantine). Keep in sync with src/index.ts.",
+  "id": "com.illusions-lab.jtf-style-guide",
+  "name": "JTF Japanese Standard Style Guide",
+  "nameJa": "JTF日本語標準スタイルガイド",
+  "version": "0.1.0",
+  "engineApi": 1,
+  "license": "MIT",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "maintainerEmail": "rulesets@illusions.app",
+  "rulesetPrefix": "jtf-",
+  "guidelines": [
+    {
+      "id": "jtf-style-guide",
+      "nameJa": "JTF日本語標準スタイルガイド",
+      "publisherJa": "日本翻訳連盟（JTF）",
+      "year": 2023,
+      "license": "CC BY 4.0",
+      "descriptionJa": "翻訳・実務日本語の表記、句読点、記号、単位を統一するための日本翻訳連盟による標準スタイルガイド。"
+    }
+  ],
+  "rules": [
+    {
+      "ruleId": "jtf-1-2-1",
+      "nameJa": "句読点の統一",
+      "descriptionJa": "句点（。）と読点（、）について、JTFスタイルガイドの基準に従って表記を統一します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "これは、見本となる例です。",
+        "negativeExample": "これは，見本となる例です．",
+        "sourceReference": "JTF日本語標準スタイルガイド 1.2.1 句点（。）と読点（、）"
+      }
+    },
+    {
+      "ruleId": "jtf-1-2-1-punctuation",
+      "nameJa": "全角の読点・句点を使う",
+      "descriptionJa": "句読点には全角の「、」と「。」を使います。和文の句読点としてピリオド（.）とカンマ（,）は使用しません。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "これは、見本となる例です。",
+        "negativeExample": "これは，見本となる例です．",
+        "sourceReference": "JTF日本語標準スタイルガイド 1.2.1 句点（。）と読点（、）"
+      }
+    },
+    {
+      "ruleId": "jtf-2-1-10-digit-comma",
+      "nameJa": "数字の桁区切りと小数点",
+      "descriptionJa": "算用数字の位取りの表記について、桁区切りには「カンマ」、小数点には「ピリオド」を使います。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "12,345.67",
+        "negativeExample": "12，345．67",
+        "sourceReference": "JTF日本語標準スタイルガイド 2.1.10 算用数字の位取りの表記"
+      }
+    },
+    {
+      "ruleId": "jtf-2-1-5-fullwidth-kana",
+      "nameJa": "カタカナは全角で表記",
+      "descriptionJa": "漢字、ひらがな、カタカナは全角で表記します。半角カタカナは使用しません。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "メールアドレス",
+        "negativeExample": "ﾒｰﾙｱﾄﾞﾚｽ",
+        "sourceReference": "JTF日本語標準スタイルガイド 2.1.5 カタカナ"
+      }
+    },
+    {
+      "ruleId": "jtf-2-1-8",
+      "nameJa": "算用数字の表記統一",
+      "descriptionJa": "算用数字について、JTFスタイルガイドの基準に従って表記を統一します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "ファイルサイズは256MBです。",
+        "negativeExample": "ファイルサイズは２５６ＭＢです。",
+        "sourceReference": "JTF日本語標準スタイルガイド 2.1.8 算用数字"
+      }
+    },
+    {
+      "ruleId": "jtf-2-1-8-halfwidth-alnum",
+      "nameJa": "英数字は半角で表記",
+      "descriptionJa": "算用数字とアルファベットは半角で表記します（横組みの場合）。全角の英数字は使用しません。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "12345、abc DEF",
+        "negativeExample": "１２３４５、ａｂｃ ＤＥＦ",
+        "sourceReference": "JTF日本語標準スタイルガイド 2.1.8 算用数字、2.1.9 アルファベット"
+      }
+    },
+    {
+      "ruleId": "jtf-2-2-1-kanji",
+      "nameJa": "副詞などの漢字表記",
+      "descriptionJa": "特定の副詞などは、ひらがなではなく「漢字」で表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "必ず一切の責任を負う。",
+        "negativeExample": "かならずいっさいの責任を負う。",
+        "sourceReference": "JTF日本語標準スタイルガイド 2.2.1 ひらがなと漢字の使い分け"
+      }
+    },
+    {
+      "ruleId": "jtf-2-3-no-space",
+      "nameJa": "半角と全角の間のスペース",
+      "descriptionJa": "半角文字と全角文字の間に半角スペースを入れない。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "JTF標準",
+        "negativeExample": "JTF 標準",
+        "sourceReference": "JTF日本語標準スタイルガイド 2.3 文字間のスペース"
+      }
+    },
+    {
+      "ruleId": "jtf-3-1-1",
+      "nameJa": "句点の打ち方",
+      "descriptionJa": "句点（。）について、JTFスタイルガイドの基準に従って表記を統一します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "この機能を使用して、ファイルを保存します。",
+        "negativeExample": "この機能を使用して、ファイルを保存します",
+        "sourceReference": "JTF日本語標準スタイルガイド 3.1.1 句点（。）"
+      }
+    },
+    {
+      "ruleId": "jtf-3-1-1-kuten-brackets",
+      "nameJa": "閉じかっこ前の句点",
+      "descriptionJa": "文中にかぎかっこや丸かっこが入る場合は、閉じかっこの前に句点（。）を打ちません。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "A氏は「5月に新製品を発売します」と述べました。",
+        "negativeExample": "A氏は「5月に新製品を発売します。」と述べました。",
+        "sourceReference": "JTF日本語標準スタイルガイド 3.1.1 句点（。）"
+      }
+    },
+    {
+      "ruleId": "jtf-3-1-3",
+      "nameJa": "ピリオド・カンマを使わない",
+      "descriptionJa": "ピリオド（.）、カンマ（,）について、JTFスタイルガイドの基準に従って表記を統一します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "データを処理します。次の画面に進みます。",
+        "negativeExample": "データを処理します.次の画面に進みます.",
+        "sourceReference": "JTF日本語標準スタイルガイド 3.1.3 ピリオド（.）、カンマ（,）"
+      }
+    },
+    {
+      "ruleId": "jtf-3-3-1-parentheses-space",
+      "nameJa": "かっこ周辺のスペース",
+      "descriptionJa": "かっこの外側、内側ともにスペースを入れません。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "クォータ",
+        "negativeExample": "クォータ",
+        "sourceReference": "JTF日本語標準スタイルガイド 2.3.2 かっこ類と隣接する文字の間のスペースの有無"
+      }
+    },
+    {
+      "ruleId": "jtf-3-3-brackets-fullwidth",
+      "nameJa": "かっこは全角で表記",
+      "descriptionJa": "丸かっこ（）、大かっこ［］、かぎかっこ「」、二重かぎかっこ『』などは原則として全角で表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "［ファイル］メニュー",
+        "negativeExample": "[ファイル]メニュー",
+        "sourceReference": "JTF日本語標準スタイルガイド 3.3 かっこ"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-2",
+      "nameJa": "長さの単位（SI）",
+      "descriptionJa": "長さについて、SI単位（m、cm、mm、km）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "全長 1.5 m、厚さ 3 mm",
+        "negativeExample": "全長 1.5 M、厚さ 3 MM",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.2 長さ"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-3",
+      "nameJa": "質量の単位（SI）",
+      "descriptionJa": "質量について、SI単位（g、kg、t）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "体重 60 kg、荷物 500 g",
+        "negativeExample": "体重 60 Kg",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.3 質量"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-4",
+      "nameJa": "面積・体積の単位（SI）",
+      "descriptionJa": "面積、体積について、SI単位（m²、m³、L）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "床面積 75 m²、容量 500 mL",
+        "negativeExample": "床面積 75 m2",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.4 面積、体積"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-5",
+      "nameJa": "電気の単位（SI）",
+      "descriptionJa": "電気について、SI単位（V、A、W、Ω、Hz）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "電圧 100 V、消費電力 60 W",
+        "negativeExample": "電圧 100 v、消費電力 60 w",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.5 電気"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-6",
+      "nameJa": "温度の単位（℃）",
+      "descriptionJa": "温度について、摂氏（℃）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "室温 25℃",
+        "negativeExample": "室温 25°C",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.6 温度"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-7",
+      "nameJa": "周波数の単位（SI）",
+      "descriptionJa": "周波数について、SI単位（Hz、kHz、MHz、GHz）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "50 Hz、2.4 GHz",
+        "negativeExample": "50 hz、2.4 ghz",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.7 周波数"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-8",
+      "nameJa": "速度の単位（SI）",
+      "descriptionJa": "速度について、SI単位（m/s、km/h）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "時速 60 km",
+        "negativeExample": "時速 60 km",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.8 速度"
+      }
+    },
+    {
+      "ruleId": "jtf-4-3-9",
+      "nameJa": "伝送速度の単位",
+      "descriptionJa": "伝送速度について、単位（bps、kbps、Mbps、Gbps）を正しく表記します。",
+      "guidelineId": "jtf-style-guide",
+      "level": "L1",
+      "defaultConfig": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "applicableModes": [
+        "official",
+        "academic",
+        "blog"
+      ],
+      "docs": {
+        "positiveExample": "通信速度 100 Mbps",
+        "negativeExample": "通信速度 100 MBPS、100 mbps",
+        "sourceReference": "JTF日本語標準スタイルガイド 4.3.9 伝送速度"
+      }
+    }
+  ]
+}
