@@ -7,7 +7,7 @@
   "engineApi": 1,
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "maintainerEmail": "rulesets@illusions.app",
+  "maintainerEmail": "ruleset_maintainer@illusions.app",
   "rulesetPrefix": "jtf-",
   "guidelines": [
     {
