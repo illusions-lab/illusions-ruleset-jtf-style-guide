@@ -1,6 +1,6 @@
 {
   "name": "illusions-ruleset-jtf-style-guide",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "description": "illusions 校正ルールセット — JTF日本語標準スタイルガイド（日本翻訳連盟）",
   "type": "module",

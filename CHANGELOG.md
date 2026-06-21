@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.2.1
+
+### Changed
+
+- マーケットプレイス用 OG 画像（`OG.png`）を作成。
+- authoring ガイド（docs/README）のサンプル参照を実ルールIDに更新。
+
 ## v0.2.0
 
 ### Changed
